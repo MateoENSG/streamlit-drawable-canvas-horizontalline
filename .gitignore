@@ -7,8 +7,7 @@ __pycache__/
 *$py.class
 
 # Distribution / packaging
-build/
-!streamlit_drawable_canvas/frontend/build/
+#build/
 dist/
 eggs/
 .eggs/
