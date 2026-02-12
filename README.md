@@ -1,3 +1,14 @@
+# IMPORTANT
+
+---
+
+This project is a fork made from the original unmaintained project : https://github.com/andfanilo/streamlit-drawable-canvas 
+
+---
+
+
+
+
 # Streamlit - Drawable Canvas
 
 ---
