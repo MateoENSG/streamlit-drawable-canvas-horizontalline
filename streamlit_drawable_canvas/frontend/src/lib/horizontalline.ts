@@ -39,7 +39,7 @@ class HorizontalLineTool extends FabricTool {
       
       // Créer la ligne
       let line = new fabric.Line(
-        [0, 0, canvas.getWidth(), 0],
+        [0, pointer.y, canvas.getWidth(), pointer.y],
         {
           strokeWidth: this.strokeWidth,
           stroke: this.strokeColor,
@@ -49,7 +49,7 @@ class HorizontalLineTool extends FabricTool {
       // Créer le label
       let label = new fabric.Text(`#${this.objectCounter}`, {
         left: 10,
-        top: -20,
+        top: pointer.y - 20,
         fontSize: 14,
         fill: this.strokeColor,
         fontFamily: 'Arial',
@@ -59,7 +59,7 @@ class HorizontalLineTool extends FabricTool {
       // Créer un groupe
       let group = new fabric.Group([line, label], {
         left: 0,
-        top: pointer.y,
+        top: pointer.y - 20,
         selectable: false,
         evented: false,
       })
