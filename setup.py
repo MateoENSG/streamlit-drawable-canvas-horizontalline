@@ -1,34 +1,25 @@
-from os.path import dirname
-from os.path import join
-import setuptools
+from setuptools import setup, find_packages
 
-
-def readme() -> str:
-    """Utility function to read the README file.
-    Used for the long_description.  It's nice, because now 1) we have a top
-    level README file and 2) it's easier to type in the README file than to put
-    a raw string in below.
-    :return: content of README.md
-    """
-    return open(join(dirname(__file__), "README.md")).read()
-
-
-setuptools.setup(
-    name="streamlit-drawable-canvas",
-    version="0.9.3",
-    author="Fanilo ANDRIANASOLO",
-    author_email="contact@andfanilo.com",
-    description="A Streamlit custom component for a free drawing canvas using Fabric.js.",
-    long_description=readme(),
+setup(
+    name="streamlit-drawable-canvas-horizontalline",
+    version="0.1.0",  
+    author="Votre Nom",
+    author_email="votre.email@example.com",
+    description="Streamlit component for drawable canvas with horizontal line",
+    long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/andfanilo/streamlit-drawable-canvas",
-    packages=setuptools.find_packages(),
+    url="https://github.com/MateoENSG/streamlit-drawable-canvas-horizontalline",
+    packages=find_packages(),
     include_package_data=True,
-    classifiers=[],
-    python_requires=">=3.6",
     install_requires=[
+        "streamlit>=0.63",
         "Pillow",
         "numpy",
-        "streamlit >= 0.63",
-    ]
+    ],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.7',
 )
